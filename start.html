@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.7.10/dist/vue.js"></script>
+</head>
+<body>
+    <div id="hoang" class="flex">
+    	<div>
+	    	<div class ="section_1 flex">
+		    	<p>{{greet('vip')}}</p>
+		    	<p>{{ name }}</p>
+		    	<p><a v-bind:href="web">vip</a></p>
+		    	<p v-html="web1" ></p>
+	    	</div>
+
+	        <div class="section_2">
+		    	<button v-on:click="add(1)" class="bt">+ 1</button>
+		    	<button v-on:click="subtract(1)" class="bt">- 1</button>
+		    	<button v-on:click="add(10)" class="bt">+ 10</button>
+		    	<button v-on:click="subtract(10)" class="bt">- 10</button>
+		    	<button v-on:click.once="add(100)" class="bt">+ 100 (1 lần)</button>
+	    	    <p>my age is {{age}}</p>
+		    </div>
+
+	<!----------->
+
+		    <div class="section_3 bottom flex">
+		    	<div>
+		    		<label>name:</label>
+		    		<input type="text" v-on:keyup="logName" v-model="Name"><br>
+		    		<span>name: {{Name}}</span>
+		    	</div>
+		    	<div>
+		    		<label>age:</label>
+			    	<input type="text" v-on:keyup.enter="logage" v-model="Age"><br>
+			    	<span> Age: {{Age}}</span>
+		    	</div>
+		    </div>
+
+	<!----------->
+
+	        <div class="section_4 bottom">
+	        	<button v-on:click="a++" class="bt">add to A</button>
+	        	<button v-on:click="b++" class="bt">add to B</button>
+	        	<div class="flex">
+	        		<p>A = {{a}}</p>
+	        		<p>Age + A = {{addToA}}</p>
+	        	</div>
+	        	<div class="flex">
+	        		<p>B = {{b}}</p>
+	        		<p>Age + B = {{addToB}}</p>
+	        	</div>
+	        </div>
+
+	<!----------->
+
+	        <div v-on:click="available = !available" v-bind:class="{available: available}" class="bottom">
+	        	<span class="span">vip</span>
+	        </div>
+	        <div v-bind:class="compClasses ">
+	        	<button v-on:click="vip = !vip" class="bt">toggle vip</button>
+	        	<button v-on:click="available = !available" class="bt">toggle available</button><br>
+	        	<span class="span bottom">hoang</span>
+	        </div>
+
+	<!----------->
+
+	        <div>
+	        	<button v-on:click="error = !error" class="bt"> Toggle Eror</button>
+	        	<button v-on:click="success = !success" class="bt">Toggle success</button>
+	        	<p v-if="error"> error 404</p>
+	        	<p v-if="success">:))</p>
+	        	<p v-show="error">error 404</p>
+	        	<p v-show="success">:))</p>
+	        </div>
+
+	<!----------->
+
+			<ul class="flex">
+				<li v-for="chapters in chapter" >{{chapters}}</li>
+			</ul>
+			<div class="flex">
+				<ul>
+					<li v-for="(ninja, index) in ninjas">{{index}}. {{ninja.Name}},{{ninja.oll}}</li>
+				</ul>
+				<div class="pd">
+					<template v-for="(ninja in ninjas">
+						<div v-for="(val,key) in ninja">
+							<p>{{key}}-{{val}}</p>
+						</div>
+					</template>
+				</div>
+			</div>
+
+	<!----------->
+
+	        
+
+
+
+	    </div>
+	    <div>
+	    	<div id="canvas" class="top" v-on:mousemove="up">{{x}}, {{y}}</div>
+
+	    	<div id="bag" v-bind:class="{burst : ended}"  v-on:click="punch"></div>
+	        <div id="bag-health">
+	        	<div v-bind:style="{ width: health + '%'}"></div>
+	        </div>
+	        <div id="controls">
+	        	<button v-on:click="punch" v-show="!ended">Punch</button>
+	        	<button v-on:click="restart">Reastart</button>
+	        </div>
+    	</div>
+    </div>
+    <section></section>
+
+    <script src="start.js"></script>
+</body>
+</html>

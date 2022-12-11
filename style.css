@@ -1,0 +1,120 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.flex{
+	display: flex;
+}
+
+#hoang{
+	margin: 100px;
+}
+
+.bt{
+	min-width: 60px;
+	padding: 10px 15px;
+	background-color: pink;
+	border: none;
+	border-radius: 6px;
+	margin-bottom: 30px;
+}
+
+#canvas{
+	width: 600px;
+	padding: 200px 20px;
+	text-align: center;
+	border: 1px solid #333;
+	margin-left: 30px;
+}
+
+.section_1 p{
+    padding: 30px;
+
+}
+
+.section_1 p:first-child{
+	padding-left: 0px;
+}
+
+.section_2 {
+	margin-bottom: 30px;
+}
+
+.section_3 div:last-child{
+	margin-left: 30px;
+    
+}
+
+.section_4 p:last-child{
+	margin-left: 30px;
+    
+}
+
+.bottom{
+	margin-bottom: 30px;
+}
+
+.top{
+	margin-top: 30px;
+}
+
+.span{
+	background: green;
+	display: inline-block;
+	padding: 8px 30px;
+	color: white;
+	border-radius: 6px;
+}
+
+
+.available span{
+	background: pink;
+	color: black;
+	padding: 8px 30px;
+	border-radius: 6px;
+}
+
+.vip span:after{
+	content: "vip";
+	margin-left: 10px;
+}
+
+ul li{
+	list-style-type: none;
+	padding: 30px;
+}
+
+.pd{
+	list-style-type: none;
+	padding: 30px;
+}
+
+#bag{
+	width: 200px;
+	height: 500px;
+	margin: auto;
+	background: url(img/bag.png) center no-repeat;
+	background-size: 80%;
+}
+
+
+#bag.burst{
+	background: url(img/bag-burst.png) center no-repeat;
+	background-size: 80%;
+}
+#bag-health{
+	width: 200px;
+	margin: 0 auto 20px auto;
+
+}
+#bag-health div{
+	height: 20px;
+	background: crimson;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+#controls{
+	width: 120px;
+	margin: 0 auto;
+}
